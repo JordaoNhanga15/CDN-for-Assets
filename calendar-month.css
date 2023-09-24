@@ -1,0 +1,259 @@
+.calendar {
+    height: max-content !important;
+    width: max-content !important;
+    background-color: var(--bg-main) !important;
+    z-index: 999 !important;
+    overflow: hidden !important;
+    display: none !important;
+    width: 100% !important;
+    max-width: -moz-available !important;
+  }
+
+  .calendar-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    justify-items: center !important;
+    align-items: center !important;
+    font-size: 25px !important;
+    font-weight: 600 !important;
+    color: var(--color-txt) !important;
+    padding: 10px !important;
+  }
+
+  .calendar-body {
+    padding: 10px !important;
+  }
+
+  .month-picker {
+    padding: 5px 10px !important;
+    border-radius: 10px !important;
+    cursor: pointer !important;
+  }
+
+  .month-element {
+    border-radius: 10px !important;
+  }
+
+  .month-element:hover {
+    background-color: var(--color-hover) !important;
+  }
+
+  .month-element:hover {
+    background-color: var(--color-hover) !important;
+  }
+
+  .year-picker {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .year-change {
+    width: 40px !important;
+    max-height: 40px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    place-items: center !important;
+    margin: 0 10px !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease-in-out !important;
+  }
+
+  .year-change:hover {
+    box-shadow: var(--shadow) !important;
+    background-color: var(--color-hover) !important;
+  }
+
+  .year-container {
+    display: none !important;
+    justify-content: flex-start !important;
+    position: relative !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    transform: scale(1.5) !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: var(--bg-main) !important;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    align-items: center !important;
+    transition: all 0.2s ease-in-out !important;
+  }
+
+  .year-container.show {
+    display: flex !important;
+    transform: scale(1) !important;
+    visibility: visible !important;
+    pointer-events: visible !important;
+    transition: all 0.2s ease-in-out !important;
+  }
+
+  .year-list {
+    width: 100% !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    justify-items: center !important;
+    background-color: var(--bg-main) !important;
+    padding: 20px !important;
+    grid-template-columns: 1fr 1fr 1fr 1fr !important;
+    gap: 10px 30px !important;
+    display: grid !important;
+    margin-right: 17px !important;
+  }
+
+  .year-list div {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    color: var(--color-txt) !important;
+    height: 60px !important;
+    cursor: pointer !important;
+    font-size: 1rem !important;
+  }
+
+  .year-list div:hover {
+    background-color: var(--color-hover) !important;
+    border-radius: 10px !important;
+    transition: all 0.2s ease-in-out !important;
+    cursor: pointer !important;
+  }
+
+  .year-picker {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 5px 10px !important;
+    border-radius: 10px !important;
+    cursor: pointer !important;
+  }
+
+  .year-pickers {
+    border-radius: 10px !important;
+    cursor: pointer !important;
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    transition: all 0.2s ease-in-out !important;
+  }
+
+  .month-containers {
+    padding: 15px !important;
+    display: none !important;
+  }
+
+  .year-picker:hover {
+    transition: all 0.2s ease-in-out !important;
+    background-color: var(--color-hover) !important;
+  }
+
+  .month-containers.show {
+    display: block !important;
+    transform: scale(1) !important;
+    visibility: visible !important;
+    pointer-events: visible !important;
+    transition: all 0.2s ease-in-out !important;
+  }
+
+  .month-list {
+    height: 100% !important;
+    background-color: var(--bg-main) !important;
+    padding: 20px !important;
+    grid-template-columns: repeat(3, auto) !important;
+    gap: 10px !important;
+    display: grid !important;
+    width: 100% !important;
+  }
+
+  .month-list.show {
+    transform: scale(1) !important;
+    visibility: visible !important;
+    pointer-events: visible !important;
+    transition: all 0.2s ease-in-out !important;
+  }
+
+  .month-list > div {
+    display: grid !important;
+    place-items: center !important;
+  }
+
+  .month-list > div > div {
+    width: 100% !important;
+    padding: 5px 20px !important;
+    border-radius: 10px !important;
+    text-align: center !important;
+    cursor: pointer !important;
+    color: var(--color-txt) !important;
+  }
+
+  .month-list > div > div:hover {
+    background-color: var(--color-hover) !important;
+  }
+
+  .month-list .month-element {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    color: var(--color-txt) !important;
+    height: 60px !important;
+    cursor: pointer !important;
+    font-size: 1.5rem !important;
+  }
+
+  .year-list .year-element {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    color: var(--color-txt) !important;
+    height: 60px !important;
+    cursor: pointer !important;
+    font-size: 1.5rem !important;
+  }
+
+  .calendar-month {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    min-height: 390px;
+    position: relative !important;
+  }
+
+  .year-class {
+    margin: 0 0 5px 0 !important;
+  }
+
+  .month-container {
+    padding: 5 !important;
+  }
+
+  .month-list {
+    padding: 0 5px 0px 5px;
+    margin-bottom: 5px !important;
+    gap: 5 !important;
+  }
+
+.year-class {
+    margin: 5px !important;
+  }
+
+.month-container {
+    padding: 5 !important;
+  }
+
+.month-list {
+    padding: 0 5px 0px 5px;
+    margin-bottom: 5px !important;
+    gap: 5 !important;
+  }
