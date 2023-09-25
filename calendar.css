@@ -57,10 +57,11 @@
   }
 
   .year-container.show {
+    display: flex !important;
     transform: scale(1) !important;
     visibility: visible !important;
     pointer-events: visible !important;
-    transition: all 0.2s ease-in-out !important;
+    transition: all 0.3s ease-in-out !important;
   }
 
   .year-list {
