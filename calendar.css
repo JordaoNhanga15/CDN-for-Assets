@@ -34,7 +34,7 @@
   }
 
   .year-container {
-    /* display: flex !important; */
+    display: none !important;
     justify-content: flex-start !important;
     position: relative !important;
     flex-direction: column !important;
