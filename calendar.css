@@ -118,7 +118,7 @@
     background-color: var(--color-hover) !important;
   }
 
-  .month-container.show {
+  .months-container.show {
     transform: scale(1) !important;
     visibility: visible !important;
     pointer-events: visible !important;
