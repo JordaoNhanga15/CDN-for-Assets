@@ -171,7 +171,6 @@
     color: var(--color-txt) !important;
     height: 60px !important;
     cursor: pointer !important;
-    font-size: 1.5rem !important;
   }
 
    .year-list div:hover {
@@ -254,7 +253,6 @@
     color: var(--color-txt) !important;
     height: 60px !important;
     cursor: pointer !important;
-    font-size: 1.5rem !important;
   }
 
   .year-list .year-element {
@@ -265,7 +263,6 @@
     color: var(--color-txt) !important;
     height: 60px !important;
     cursor: pointer !important;
-    font-size: 1.5rem !important;
   }
 
    .calendar-day-hover {
