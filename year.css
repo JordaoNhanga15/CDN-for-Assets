@@ -128,7 +128,7 @@
 .month-list {
     height: 100% !important;
     background-color: var(--bg-main) !important;
-    padding: 20px !important;
+    padding-top: 20px !important;
     grid-template-columns: repeat(3, auto) !important;
     gap: 10px !important;
     display: grid !important;
