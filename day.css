@@ -1,21 +1,99 @@
+.calendar {
+    height: max-content !important;
+    width: max-content !important;
+    background-color: var(--bg-main) !important;
+    z-index: 999 !important;
+    overflow: hidden !important;
+    display: none !important;
+    width: 100% !important;
+    max-width: -moz-available !important;
+}
+
+.calendar.show {
+    display: block !important;
+}
+
+.light .calendar {
+    box-shadow: var(--shadow) !important;
+}
+
 .calendar-header {
     display: flex !important;
     justify-content: space-between !important;
     justify-items: center !important;
     align-items: center !important;
-    font-size: 25px !important;
+    font-size: 18px !important;
     font-weight: 600 !important;
     color: var(--color-txt) !important;
     padding: 10px !important;
-  }
+}
 
-  .year-picker {
+.calendar-body {
+    padding: 10px !important;
+}
+
+.calendar-week-day {
+    height: 50px !important;
+    display: grid !important;
+    grid-template-columns: repeat(7, 1fr) !important;
+    font-weight: 600 !important;
+}
+
+.calendar-week-day div {
+    display: grid !important;
+    place-items: center !important;
+    color: var(--bg-second) !important;
+}
+
+.calendar-days {
+    display: grid !important;
+    grid-template-columns: repeat(7, 1fr) !important;
+    gap: 2px !important;
+    color: var(--color-txt) !important;
+    text-align: center !important;
+}
+
+.calendar-days div.curr-date {
+    outline: 0 !important;
+    color: var(--c-theme-primary) !important;
+    border: 2px solid var(--c-theme-primary-accent) !important;
+}
+
+.calendar-days div.curr-date:hover,
+.calendar-days div.curr-date:focus {
+    background-color: var(--c-theme-primary-accent) !important;
+}
+
+div.calendar-day-hover:hover {
+    background-color: var(--c-theme-primary-accent) !important;
+}
+
+.calendar-days div.curr-date span {
+    display: none !important;
+}
+
+.month-picker {
+    padding: 5px 20px !important;
+    border-radius: 10px !important;
+    cursor: pointer !important;
+}
+
+.month-element {
+    border-radius: 10px !important;
+}
+
+.month-picker:hover,
+.month-element:hover {
+    background-color: var(--color-hover) !important;
+}
+
+.year-picker {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-  }
+}
 
-  .year-change {
+.year-change {
     width: 40px !important;
     max-height: 40px !important;
     border-radius: 50% !important;
@@ -26,14 +104,29 @@
     margin: 0 10px !important;
     cursor: pointer !important;
     transition: all 0.2s ease-in-out !important;
-  }
+}
 
-  .year-change:hover {
+.year-change:hover {
     box-shadow: var(--shadow) !important;
     background-color: var(--color-hover) !important;
-  }
+}
 
-  .year-container {
+.month-container {
+    display: none !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    position: relative !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    transform: scale(1.5) !important;
+    pointer-events: none !important;
+    width: 100% !important;
+    height: 100% !important;
+    visibility: hidden !important;
+    padding: 15px !important;
+}
+
+.year-container {
     display: none !important;
     justify-content: flex-start !important;
     position: relative !important;
@@ -42,42 +135,35 @@
     transform: scale(1.5) !important;
     visibility: hidden !important;
     pointer-events: none !important;
-    position: absolute !important;
     width: 100% !important;
     height: 100% !important;
-    top: 0 !important;
-    left: 0 !important;
-    background-color: var(--bg-main) !important;
     padding-top: 20px !important;
     padding-bottom: 20px !important;
     padding-left: 8px !important;
     padding-right: 8px !important;
     align-items: center !important;
     transition: all 0.2s ease-in-out !important;
-  }
+}
 
-  .year-container.show {
+.year-container.show {
     display: flex !important;
     transform: scale(1) !important;
     visibility: visible !important;
     pointer-events: visible !important;
-    transition: all 0.3s ease-in-out !important;
-  }
+    transition: all 0.2s ease-in-out !important;
+}
 
-  .year-list {
+.year-list {
     width: 100% !important;
     align-items: center !important;
     justify-content: space-between !important;
     justify-items: center !important;
     background-color: var(--bg-main) !important;
-    padding: 20px !important;
     grid-template-columns: 1fr 1fr 1fr 1fr !important;
-    gap: 10px 5px !important;
     display: grid !important;
-    margin-right: 17px !important;
-  }
+}
 
-  .year-list div {
+.year-list div {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -85,46 +171,48 @@
     color: var(--color-txt) !important;
     height: 60px !important;
     cursor: pointer !important;
-  }
+}
 
-  .year-list div:hover {
+.year-list div:hover {
     background-color: var(--color-hover) !important;
     border-radius: 10px !important;
     transition: all 0.2s ease-in-out !important;
     cursor: pointer !important;
-  }
+}
 
-  .year-picker {
+.year-picker {
     padding: 5px 10px !important;
-    margin-left: 20px !important;
     border-radius: 10px !important;
     cursor: pointer !important;
-  }
+}
 
-  .year-pickers {
+.year-pickers {
     border-radius: 10px !important;
     cursor: pointer !important;
     width: 100% !important;
     display: flex !important;
     align-items: center !important;
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+    /* padding-left: 20px !important; */
+    /* padding-right: 20px !important; */
     transition: all 0.2s ease-in-out !important;
-  }
+}
 
-  .year-picker:hover {
+.year-picker:hover {
     transition: all 0.2s ease-in-out !important;
-    background-color: var(--color-hover) !important;
-  }
+    /* background-color: var(--color-hover) !important; */
+}
 
-  .months-container.show {
+.month-container.show {
+    display: flex !important;
+    flex-direction: column !important;
     transform: scale(1) !important;
     visibility: visible !important;
     pointer-events: visible !important;
+    padding: 15px !important;
     transition: all 0.2s ease-in-out !important;
-  }
+}
 
-  .month-list {
+.month-list {
     height: 100% !important;
     background-color: var(--bg-main) !important;
     padding: 20px !important;
@@ -132,34 +220,34 @@
     gap: 10px !important;
     display: grid !important;
     width: 100% !important;
-  }
+}
 
-  .month-list.show {
+.month-list.show {
     transform: scale(1) !important;
     visibility: visible !important;
     pointer-events: visible !important;
     transition: all 0.2s ease-in-out !important;
-  }
+}
 
-  .month-list > div {
+.month-list>div {
     display: grid !important;
     place-items: center !important;
-  }
+}
 
-  .month-list > div > div {
+.month-list>div>div {
     width: 100% !important;
     padding: 5px 20px !important;
     border-radius: 10px !important;
     text-align: center !important;
     cursor: pointer !important;
     color: var(--color-txt) !important;
-  }
+}
 
-  .month-list > div > div:hover {
+.month-list>div>div:hover {
     background-color: var(--color-hover) !important;
-  }
+}
 
-  .month-list .month-element {
+.month-list .month-element {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -167,9 +255,9 @@
     color: var(--color-txt) !important;
     height: 60px !important;
     cursor: pointer !important;
-  }
+}
 
-  .year-list .year-element {
+.year-list .year-element {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -177,9 +265,14 @@
     color: var(--color-txt) !important;
     height: 60px !important;
     cursor: pointer !important;
-  }
+}
 
-  .year-container {
+.calendar-day-hover {
+    height: 50px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 5px !important;
     position: relative !important;
-    background: none !important;
-  }
+    cursor: pointer !important;
+}

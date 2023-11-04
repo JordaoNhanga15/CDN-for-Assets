@@ -102,7 +102,7 @@
     background-color: var(--bg-main) !important;
     padding: 20px !important;
     grid-template-columns: 1fr 1fr 1fr 1fr !important;
-    gap: 10px 30px !important;
+    gap: 10px 5px !important;
     display: grid !important;
     margin-right: 17px !important;
   }
@@ -241,6 +241,11 @@
     margin-bottom: 5px !important;
     gap: 5 !important;
   }
+  
+.year-pickers {
+      transition: all 0.2s ease-in-out !important;
+      background-color: var(--color-hover) !important;
+    }
 
 .year-class {
     margin: 5px !important;

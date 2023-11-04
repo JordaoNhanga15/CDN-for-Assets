@@ -53,6 +53,11 @@
     text-align: center !important;
   }
 
+    .year-pickers {
+      transition: all 0.2s ease-in-out !important;
+      background-color: var(--color-hover) !important;
+    }
+
    .calendar-days div.curr-date {
     outline: 0 !important;
     color: var(--c-theme-primary) !important;
