@@ -1,0 +1,255 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css');
+/* @import url('https://cdn.jsdelivr.net/gh/JordaoNhanga15/CDN-for-Assets@main/bootstrap.css'); */
+
+.twitter::before {
+    content: '\f099';
+}
+
+.user::before {
+    content: '\f007';
+}
+
+.calendarr::before {
+    content: '\f073';
+}
+
+.date-input {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    background-color: var(--bg-main) !important;
+    width: 100% !important;
+    color: var(--color-txt) !important;
+}
+
+.date-input input {
+    padding: 8px 12px !important;
+    background: none !important;
+    width: 100% !important;
+    font-size: 14px !important;
+    color: var(--color-txt) !important;
+    border: 0px !important;
+}
+
+.date-input input::placeholder {
+    color: var(--color-txt) !important;
+}
+
+.date-input input:focus {
+    outline: none !important;
+    color: var(--color-txt) !important;
+}
+
+.date-input i {
+    height: 100% !important;
+    align-items: center !important;
+    justify-content: center !important;
+    display: flex !important;
+    width: 40px !important;
+    cursor: pointer !important;
+    font-size: 20px !important;
+    padding: 10px !important;
+    border-left: 2px solid #ced4da;
+    color: var(--color-txt) !important;
+}
+
+.date-input span {
+    height: 100% !important;
+    align-items: center !important;
+    justify-content: center !important;
+    display: flex !important;
+    width: 40px !important;
+    cursor: pointer !important;
+    font-size: 20px !important;
+    padding: 10px !important;
+    font-size: 15px !important;
+    padding: 13px !important;
+    color: #6c757d !important;
+}
+
+.date-input span:hover {
+    background-color: var(--color-hover) !important;
+    /* border-radius: 10px !important; */
+    transition: all 0.2s ease-in-out !important;
+    cursor: pointer !important;
+}
+
+.light {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+    place-items: center !important;
+    font-family: var(--font-family) !important;
+}
+
+@media screen and (max-width: 767px) {
+    .light {
+        width: 100% !important;
+    }
+
+    .light .date-input {
+        width: 100% !important;
+    }
+
+    .light .calendar {
+        width: 100% !important;
+    }
+
+    .dark {
+        width: 100% !important;
+    }
+
+    .dark .date-input {
+        width: 100% !important;
+    }
+
+    .dark .calendar {
+        width: 100% !important;
+    }
+}
+
+.dark {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+    place-items: center !important;
+    font-family: var(--font-family) !important;
+}
+
+.calendar {
+    height: max-content !important;
+    width: max-content !important;
+    background-color: var(--bg-main) !important;
+    z-index: 999 !important;
+    overflow: hidden !important;
+    display: none !important;
+    width: 100% !important;
+    max-width: -moz-available !important;
+}
+
+.calendar.show {
+    min-height: 405px !important;
+    height: auto !important;
+    display: block !important;
+}
+
+.light .calendar {
+    box-shadow: var(--shadow) !important;
+}
+
+@font-face {
+    font-family: 'Glyphicons Halflings';
+}
+
+  .calendar-footer {
+     padding: 10px !important;
+     margin-top: 10px !important;
+     display: flex !important;
+     justify-content: space-between !important;
+     justify-items: center !important;
+     align-content: center !important;
+     align-items: center !important;
+ }
+
+  .calendar-footer .trash-link-button {
+     flex-shrink: 0 !important;
+     width: 44px !important;
+     height: 44px !important;
+     display: flex !important;
+     font-size: 20px !important;
+     align-items: center !important;
+     justify-content: center !important;
+     color: #f34969;
+     border: 1px solid #f34969 !important;
+     opacity: 0.9 !important;
+     border-radius: 50% !important;
+     cursor: pointer !important;
+     background: transparent !important;
+ }
+
+  .year-list div {
+     font-size: 14px !important;
+ }
+
+  .year-list .year-element {
+     font-size: 14px !important;
+ }
+
+  .month-list .month-element {
+     font-size: 14px !important;
+ }
+
+  .calendar-footer .trash-link-button:hover {
+     opacity: 1 !important;
+ }
+
+  .w-100 {
+     width: 100% !important;
+ }
+
+  .d-flex {
+     display: flex !important;
+ }
+
+  .align-items-center {
+     align-items: center !important;
+ }
+
+  .justify-content-between {
+     justify-content: space-between !important;
+ }
+
+  .event-hover {
+     transition: all 0.2s ease-in-out !important;
+     background-color: var(--color-hover) !important;
+ }
+
+  .font-weight-600 {
+     font-weight: 600 !important;
+ }
+
+  .text-color {
+     color: var(--color-txt) !important;
+ }
+
+  .font-size-25 {
+     font-size: 25px !important;
+ }
+
+  .toggle {
+     display: flex !important;
+     align-items: center !important;
+ }
+
+  .toggle span {
+     margin-right: 10px !important;
+     color: var(--color-txt) !important;
+ }
+
+  .dark-mode-switch {
+     position: relative !important;
+     width: 48px !important;
+     height: 25px !important;
+     border-radius: 14px !important;
+     background-color: var(--bg-second) !important;
+     cursor: pointer !important;
+ }
+
+  .dark-mode-switch-ident {
+     width: 21px !important;
+     height: 21px !important;
+     border-radius: 50% !important;
+     background-color: var(--bg-main) !important;
+     position: absolute !important;
+     top: 2px !important;
+     left: 2px !important;
+     transition: left 0.2s ease-in-out !important;
+ }
+
+  .dark .dark-mode-switch .dark-mode-switch-ident {
+     top: 2px !important;
+     left: calc(2px + 50%) !important;
+ }
